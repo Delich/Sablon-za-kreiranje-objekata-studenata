@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Šablon za kreiranje objekata studenata</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>  
+           function Student(name,address,phone,course){
+           this.name = name;
+           this.address = address;
+           this.phone = phone;
+           this.course = course;
+}
+           Student.prototype.getName = function () {
+           return this.name;
+};
+           Student.prototype.getInfo = function () {
+           return "<br>" + "Name:" + this.name + "<br>" +
+           "Address:" + this.address + "<br>" +
+           "Phone:"  + this.phone + "<br>" +
+           "Course:"  + this.course + "<br>"+ "<br>"
+} ;         
+           let studentpravo = new Student ("Thomas Bangalter", "Prva avenija 8q Paris",+38761462220 ,"Pravo");
+           let studentpravoName= studentpravo.getName();
+           let studentpravoInfo = studentpravo.getInfo ();
+ 
+           document.body.innerHTML += studentpravoName
+           document.body.innerHTML += studentpravoInfo
+
+           let studentekonomija = new Student ("Guillaume Emmanuel", "Druga avenija 11y Paris",+38762410051 ,"Ekonomija");
+           let studentekonomijaName= studentekonomija.getName();
+           let studentekonomijaInfo = studentekonomija.getInfo ();
+ 
+           document.body.innerHTML += studentekonomijaName
+           document.body.innerHTML += studentekonomijaInfo
+
+           let studentkriminalistika = new Student ("Norman Cook", "Treća avenija 22a London",+38763923881 ,"Kriminalistika");
+           let studentkriminalistikaName= studentkriminalistika.getName();
+           let studentkriminalistikaInfo = studentkriminalistika.getInfo ();
+ 
+           document.body.innerHTML += studentkriminalistikaName
+           document.body.innerHTML += studentkriminalistikaInfo
+    </script>
+</body>
+</html>
